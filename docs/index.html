@@ -5,152 +5,342 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1920px;height:1080px;overflow:hidden;background:#060d1a;font-family:'IBM Plex Mono',monospace}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#04090f;font-family:'IBM Plex Mono',monospace}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:2px;padding:2px 8px;border-radius:3px}
 </style>
 </head>
 <body>
 <div id="root" data-composition-id="zk-arch"
   data-start="0" data-width="1920" data-height="1080"
   data-duration="1" data-fps="30"
-  style="position:relative;width:1920px;height:1080px;overflow:hidden;background:#060d1a">
+  style="position:relative;width:1920px;height:1080px;overflow:hidden;background:#04090f">
 
 <!-- grid -->
-<div style="position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.04) 1px,transparent 1px);background-size:60px 60px"></div>
-<!-- vignette -->
-<div style="position:absolute;inset:0;background:radial-gradient(ellipse 130% 100% at 50% 50%,transparent 40%,#060d1a 100%)"></div>
+<div style="position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.035) 1px,transparent 1px);background-size:60px 60px"></div>
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% 40%,rgba(59,130,246,0.04) 0%,transparent 70%)"></div>
 
 <!-- corner brackets -->
-<div style="position:absolute;top:28px;left:28px;width:40px;height:40px;border-top:2px solid rgba(59,130,246,0.5);border-left:2px solid rgba(59,130,246,0.5)"></div>
-<div style="position:absolute;top:28px;right:28px;width:40px;height:40px;border-top:2px solid rgba(59,130,246,0.5);border-right:2px solid rgba(59,130,246,0.5)"></div>
-<div style="position:absolute;bottom:28px;left:28px;width:40px;height:40px;border-bottom:2px solid rgba(34,197,94,0.5);border-left:2px solid rgba(34,197,94,0.5)"></div>
-<div style="position:absolute;bottom:28px;right:28px;width:40px;height:40px;border-bottom:2px solid rgba(34,197,94,0.5);border-right:2px solid rgba(34,197,94,0.5)"></div>
+<div style="position:absolute;top:24px;left:24px;width:36px;height:36px;border-top:1.5px solid rgba(59,130,246,0.6);border-left:1.5px solid rgba(59,130,246,0.6)"></div>
+<div style="position:absolute;top:24px;right:24px;width:36px;height:36px;border-top:1.5px solid rgba(59,130,246,0.6);border-right:1.5px solid rgba(59,130,246,0.6)"></div>
+<div style="position:absolute;bottom:24px;left:24px;width:36px;height:36px;border-bottom:1.5px solid rgba(34,197,94,0.6);border-left:1.5px solid rgba(34,197,94,0.6)"></div>
+<div style="position:absolute;bottom:24px;right:24px;width:36px;height:36px;border-bottom:1.5px solid rgba(34,197,94,0.6);border-right:1.5px solid rgba(34,197,94,0.6)"></div>
 
-<!-- title -->
-<div style="position:absolute;top:44px;left:0;right:0;text-align:center;font-size:28px;font-weight:700;color:#e2e8f0;letter-spacing:8px">ZK PERPS — FULL STACK ARCHITECTURE</div>
-
-<!-- MAIN 3-BOX ROW -->
-<div style="position:absolute;top:108px;left:64px;right:64px;height:560px;display:flex;align-items:stretch;gap:0">
-
-  <!-- FRONTEND BOX -->
-  <div style="width:380px;border:2px solid rgba(59,130,246,0.6);border-radius:12px;background:rgba(59,130,246,0.04);display:flex;flex-direction:column">
-    <div style="padding:22px 24px 14px;border-bottom:1px solid rgba(59,130,246,0.2)">
-      <div style="font-size:17px;font-weight:700;color:#3b82f6;letter-spacing:5px;margin-bottom:6px">FRONTEND</div>
-      <div style="font-size:12px;color:#334155;letter-spacing:2px">Next.js + TailwindCSS</div>
-    </div>
-    <div style="padding:18px 18px;display:flex;flex-direction:column;gap:9px;flex:1">
-      <div style="background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">Trading Dashboard</div>
-      <div style="background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">Order Book + Depth Chart</div>
-      <div style="background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">Position Manager</div>
-      <div style="background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">ZK Proof UI (bb.js)</div>
-      <div style="background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">PnL + Funding Dashboard</div>
-    </div>
-  </div>
-
-  <!-- ARROW FE → BE -->
-  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
-    <div style="font-size:12px;color:#334155;letter-spacing:3px">REST / WS</div>
-    <svg width="140" height="24" viewBox="0 0 140 24">
-      <defs><marker id="ah1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/></marker></defs>
-      <line x1="0" y1="12" x2="132" y2="12" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ah1)" stroke-dasharray="6,3" opacity="0.7"/>
-    </svg>
-  </div>
-
-  <!-- BACKEND (AWS) BOX -->
-  <div style="width:480px;border:2px solid rgba(245,158,11,0.6);border-radius:12px;background:rgba(245,158,11,0.03);display:flex;flex-direction:column">
-    <div style="padding:22px 24px 14px;border-bottom:1px solid rgba(245,158,11,0.2)">
-      <div style="font-size:17px;font-weight:700;color:#f59e0b;letter-spacing:5px;margin-bottom:6px">BACKEND (AWS)</div>
-      <div style="font-size:12px;color:#334155;letter-spacing:2px">Node.js / Express + WebSocket</div>
-    </div>
-    <div style="padding:18px 18px;display:flex;flex-direction:column;gap:9px;flex:1">
-      <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">EC2 — Matching Engine</div>
-      <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">Lambda — Price Oracle</div>
-      <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">DynamoDB — Order Book</div>
-      <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">S3 — Proof Archive</div>
-      <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">CloudFront — Global RPC</div>
-      <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">Liquidation Monitor (cron)</div>
-      <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">WebSocket — Live Feeds</div>
-    </div>
-  </div>
-
-  <!-- ARROW BE → SC -->
-  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
-    <div style="font-size:12px;color:#334155;letter-spacing:3px">Stellar SDK</div>
-    <svg width="140" height="24" viewBox="0 0 140 24">
-      <defs><marker id="ah2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#f59e0b"/></marker></defs>
-      <line x1="0" y1="12" x2="132" y2="12" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#ah2)" stroke-dasharray="6,3" opacity="0.7"/>
-    </svg>
-  </div>
-
-  <!-- SOROBAN CONTRACT BOX -->
-  <div style="width:420px;border:2px solid rgba(34,197,94,0.6);border-radius:12px;background:rgba(34,197,94,0.03);display:flex;flex-direction:column">
-    <div style="padding:22px 24px 14px;border-bottom:1px solid rgba(34,197,94,0.2)">
-      <div style="font-size:17px;font-weight:700;color:#22c55e;letter-spacing:5px;margin-bottom:6px">SOROBAN CONTRACT</div>
-      <div style="font-size:12px;color:#334155;letter-spacing:2px">Rust — Stellar Testnet</div>
-    </div>
-    <div style="padding:18px 18px;display:flex;flex-direction:column;gap:9px;flex:1">
-      <div style="background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">open_position()</div>
-      <div style="background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">close_position()</div>
-      <div style="background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">liquidate(proof)</div>
-      <div style="background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">verify_zk_collateral()</div>
-      <div style="background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">update_funding_rate()</div>
-    </div>
-  </div>
-
+<!-- top bar -->
+<div style="position:absolute;top:0;left:0;right:0;height:56px;border-bottom:1px solid rgba(59,130,246,0.12);display:flex;align-items:center;justify-content:center;gap:48px">
+  <div style="font-size:11px;color:#1e3a5f;letter-spacing:4px">SYSTEM · v2.4.1</div>
+  <div style="font-size:20px;font-weight:700;color:#e2e8f0;letter-spacing:10px">ZK PERPS — FULL STACK ARCHITECTURE</div>
+  <div style="font-size:11px;color:#1e3a5f;letter-spacing:4px">STELLAR · TESTNET</div>
 </div>
 
-<!-- ZK CIRCUIT BOX — offset bottom right, overlapping main row -->
-<div style="position:absolute;top:508px;right:64px;width:380px;border:2px solid rgba(168,85,247,0.65);border-radius:12px;background:rgba(10,8,20,0.95);z-index:10">
-  <div style="padding:20px 24px 12px;border-bottom:1px solid rgba(168,85,247,0.2)">
-    <div style="font-size:17px;font-weight:700;color:#a855f7;letter-spacing:5px;margin-bottom:6px">ZK CIRCUIT (Noir)</div>
-    <div style="font-size:12px;color:#334155;letter-spacing:2px">UltraHonk · BN254 · Aztec</div>
+<!-- LEFT SIDEBAR: user layer -->
+<div style="position:absolute;top:72px;left:28px;width:220px;bottom:180px;border:1px solid rgba(100,116,139,0.2);border-radius:8px;background:rgba(15,23,35,0.6);padding:16px 14px">
+  <div style="font-size:10px;color:#334155;letter-spacing:4px;margin-bottom:14px;border-bottom:1px solid rgba(100,116,139,0.1);padding-bottom:10px">USER LAYER</div>
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div style="border:1px solid rgba(100,116,139,0.25);border-radius:5px;padding:9px 12px">
+      <div style="font-size:10px;color:#475569;letter-spacing:2px;margin-bottom:4px">TRADER</div>
+      <div style="font-size:12px;color:#64748b">Freighter Wallet<br/>Stellar Testnet</div>
+    </div>
+    <div style="height:1px;background:rgba(100,116,139,0.1);margin:4px 0"></div>
+    <div style="border:1px solid rgba(59,130,246,0.2);border-radius:5px;padding:9px 12px">
+      <div style="font-size:10px;color:#3b82f6;letter-spacing:2px;margin-bottom:4px">WEB CLIENT</div>
+      <div style="font-size:12px;color:#64748b">Next.js 14<br/>TailwindCSS<br/>Recharts</div>
+    </div>
+    <div style="border:1px solid rgba(59,130,246,0.2);border-radius:5px;padding:9px 12px">
+      <div style="font-size:10px;color:#3b82f6;letter-spacing:2px;margin-bottom:4px">ZK PROVER (CLIENT)</div>
+      <div style="font-size:12px;color:#64748b">bb.js · WASM<br/>UltraHonk<br/>~200ms proof gen</div>
+    </div>
+    <div style="border:1px solid rgba(59,130,246,0.15);border-radius:5px;padding:9px 12px">
+      <div style="font-size:10px;color:#3b82f6;letter-spacing:2px;margin-bottom:4px">FREIGHTER SDK</div>
+      <div style="font-size:12px;color:#64748b">tx signing<br/>keypair mgmt</div>
+    </div>
   </div>
-  <div style="padding:16px 18px;display:flex;flex-direction:column;gap:9px">
-    <div style="background:rgba(168,85,247,0.07);border:1px solid rgba(168,85,247,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">collateral ≥ margin · private</div>
-    <div style="background:rgba(168,85,247,0.07);border:1px solid rgba(168,85,247,0.2);border-radius:6px;padding:10px 16px;font-size:13px;color:#94a3b8">position_health() · UltraHonk</div>
+  <!-- uptime indicator -->
+  <div style="position:absolute;bottom:14px;left:14px;right:14px;display:flex;align-items:center;gap:8px">
+    <div style="width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e"></div>
+    <span style="font-size:10px;color:#334155;letter-spacing:2px">CLIENT ONLINE</span>
   </div>
 </div>
 
-<!-- diagonal SVG arrow: BACKEND bottom → ZK CIRCUIT top -->
+<!-- MAIN SVG ARROWS -->
 <svg style="position:absolute;top:0;left:0;width:1920px;height:1080px;pointer-events:none" viewBox="0 0 1920 1080">
   <defs>
-    <marker id="azk" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#a855f7"/>
-    </marker>
+    <marker id="ab" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#3b82f6" opacity="0.8"/></marker>
+    <marker id="ag" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#22c55e" opacity="0.8"/></marker>
+    <marker id="ao" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#f59e0b" opacity="0.8"/></marker>
+    <marker id="ap" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#a855f7" opacity="0.8"/></marker>
+    <marker id="ab2" markerWidth="7" markerHeight="5" refX="0" refY="2.5" orient="auto"><polygon points="7 0,0 2.5,7 5" fill="#3b82f6" opacity="0.5"/></marker>
+
+    <!-- glow filter -->
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <path d="M 1060 668 C 1060 780 1540 760 1540 512"
-    stroke="#a855f7" stroke-width="1.5" fill="none"
-    marker-end="url(#azk)" stroke-dasharray="6,4" opacity="0.75"/>
-  <text x="1105" y="770" font-family="IBM Plex Mono" font-size="13" fill="#a855f7" opacity="0.7" letter-spacing="3">proof submit</text>
+
+  <!-- User → Frontend (REST/WS) -->
+  <line x1="248" y1="340" x2="292" y2="340" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#ab)" stroke-dasharray="5,3" opacity="0.6"/>
+  <text x="258" y="330" font-family="IBM Plex Mono" font-size="10" fill="#1e3a5f" letter-spacing="2">HTTPS</text>
+
+  <!-- Frontend → Backend main arrow -->
+  <line x1="660" y1="340" x2="720" y2="340" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#ab)" stroke-dasharray="5,3" opacity="0.7" filter="url(#glow)"/>
+  <!-- return arrow -->
+  <line x1="720" y1="360" x2="660" y2="360" stroke="#3b82f6" stroke-width="1" marker-end="url(#ab2)" stroke-dasharray="3,4" opacity="0.35"/>
+  <text x="668" y="325" font-family="IBM Plex Mono" font-size="11" fill="#3b82f6" opacity="0.7" letter-spacing="2">REST / WS</text>
+
+  <!-- Backend → Soroban -->
+  <line x1="1240" y1="340" x2="1304" y2="340" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#ao)" stroke-dasharray="5,3" opacity="0.7" filter="url(#glow)"/>
+  <text x="1250" y="325" font-family="IBM Plex Mono" font-size="11" fill="#f59e0b" opacity="0.7" letter-spacing="2">Stellar SDK</text>
+
+  <!-- Backend → ZK Circuit (diagonal) -->
+  <path d="M 1240 460 C 1350 560 1460 560 1460 598" stroke="#a855f7" stroke-width="1.5" fill="none" marker-end="url(#ap)" stroke-dasharray="5,4" opacity="0.7"/>
+  <text x="1280" y="548" font-family="IBM Plex Mono" font-size="11" fill="#a855f7" opacity="0.75" letter-spacing="2">proof submit</text>
+
+  <!-- ZK Circuit → Soroban (upward) -->
+  <path d="M 1580 598 C 1630 480 1630 440 1630 400" stroke="#a855f7" stroke-width="1.2" fill="none" marker-end="url(#ap)" stroke-dasharray="4,4" opacity="0.5"/>
+  <text x="1634" y="510" font-family="IBM Plex Mono" font-size="10" fill="#a855f7" opacity="0.55" letter-spacing="1">ZK proof</text>
+
+  <!-- Lambda → DynamoDB internal -->
+  <line x1="900" y1="272" x2="900" y2="312" stroke="#f59e0b" stroke-width="1" marker-end="url(#ao)" opacity="0.3"/>
+
+  <!-- Soroban → S3 (proof stored) -->
+  <path d="M 1550 380 C 1680 380 1700 200 1780 200" stroke="#22c55e" stroke-width="1" fill="none" marker-end="url(#ag)" stroke-dasharray="3,5" opacity="0.3"/>
+
+  <!-- metric lines (decorative horizontal) -->
+  <line x1="28" y1="900" x2="1892" y2="900" stroke="rgba(59,130,246,0.06)" stroke-width="1"/>
 </svg>
 
-<!-- DATA FLOW SECTION -->
-<div style="position:absolute;bottom:148px;left:64px;right:64px">
-  <div style="border-top:1px solid rgba(59,130,246,0.12);padding-top:16px">
-    <div style="font-size:11px;color:#1e3a5f;letter-spacing:5px;margin-bottom:10px">DATA FLOW</div>
-    <div style="font-size:13px;color:#334155;line-height:1.9">
-      Trader opens position → Frontend generates ZK collateral proof (bb.js) → Backend matching engine fills order → Soroban settles on-chain<br/>
-      Oracle Lambda updates mark price every 1s → Liquidation monitor checks health → ZK proof submitted → Contract liquidates if underwater
+<!-- FRONTEND BOX -->
+<div style="position:absolute;top:72px;left:256px;width:380px;bottom:180px;border:1.5px solid rgba(59,130,246,0.55);border-radius:10px;background:rgba(6,18,36,0.7);display:flex;flex-direction:column">
+  <!-- header -->
+  <div style="padding:16px 18px 12px;border-bottom:1px solid rgba(59,130,246,0.15);display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#3b82f6;letter-spacing:5px">FRONTEND</div>
+      <div style="font-size:10px;color:#1e3a5f;letter-spacing:2px;margin-top:3px">Next.js 14 · TailwindCSS · Recharts</div>
+    </div>
+    <div style="width:8px;height:8px;border-radius:50%;background:#3b82f6;box-shadow:0 0 8px #3b82f6"></div>
+  </div>
+  <!-- items -->
+  <div style="padding:14px 14px;display:flex;flex-direction:column;gap:7px;flex:1;overflow:hidden">
+    <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.18);border-radius:5px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:12px;color:#94a3b8">Trading Dashboard</span>
+      <span style="font-size:10px;color:#1e3a5f">UI</span>
+    </div>
+    <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.18);border-radius:5px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:12px;color:#94a3b8">Order Book + Depth Chart</span>
+      <span style="font-size:10px;color:#1e3a5f">WS</span>
+    </div>
+    <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.18);border-radius:5px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:12px;color:#94a3b8">Position Manager</span>
+      <span style="font-size:10px;color:#1e3a5f">REST</span>
+    </div>
+    <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(168,85,247,0.25);border-radius:5px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:12px;color:#94a3b8">ZK Proof UI <span style="color:#a855f7">(bb.js)</span></span>
+      <span style="font-size:10px;color:#a855f7">WASM</span>
+    </div>
+    <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.18);border-radius:5px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:12px;color:#94a3b8">PnL + Funding Dashboard</span>
+      <span style="font-size:10px;color:#1e3a5f">REST</span>
+    </div>
+    <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.18);border-radius:5px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:12px;color:#94a3b8">Leverage Slider (1–20×)</span>
+      <span style="font-size:10px;color:#1e3a5f">UI</span>
+    </div>
+    <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.18);border-radius:5px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:12px;color:#94a3b8">Stellar SDK Integration</span>
+      <span style="font-size:10px;color:#22c55e">XLM</span>
+    </div>
+  </div>
+  <!-- footer metric -->
+  <div style="padding:10px 14px;border-top:1px solid rgba(59,130,246,0.1);display:flex;gap:20px">
+    <span style="font-size:10px;color:#1e3a5f">PORT <span style="color:#3b82f6">3010</span></span>
+    <span style="font-size:10px;color:#1e3a5f">BUILD <span style="color:#3b82f6">next start</span></span>
+    <span style="font-size:10px;color:#1e3a5f">CDN <span style="color:#3b82f6">CloudFront</span></span>
+  </div>
+</div>
+
+<!-- BACKEND AWS BOX -->
+<div style="position:absolute;top:72px;left:718px;width:508px;bottom:180px;border:1.5px solid rgba(245,158,11,0.55);border-radius:10px;background:rgba(18,12,4,0.7);display:flex;flex-direction:column">
+  <div style="padding:16px 18px 12px;border-bottom:1px solid rgba(245,158,11,0.15);display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#f59e0b;letter-spacing:5px">BACKEND (AWS)</div>
+      <div style="font-size:10px;color:#3d2c00;letter-spacing:2px;margin-top:3px">Node.js · Express · WebSocket · EC2</div>
+    </div>
+    <div style="display:flex;gap:6px;align-items:center">
+      <div style="width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e"></div>
+      <span style="font-size:10px;color:#3d2c00">us-east-1</span>
+    </div>
+  </div>
+  <!-- two column grid -->
+  <div style="padding:12px 12px;display:grid;grid-template-columns:1fr 1fr;gap:7px;flex:1">
+    <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:5px;padding:10px 12px">
+      <div style="font-size:10px;color:#f59e0b;letter-spacing:2px;margin-bottom:5px">EC2 ENGINE</div>
+      <div style="font-size:12px;color:#64748b;line-height:1.7">Matching Engine<br/>Price-time priority<br/>&lt;1ms fill latency<br/>Auto-scaling group</div>
+    </div>
+    <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:5px;padding:10px 12px">
+      <div style="font-size:10px;color:#f59e0b;letter-spacing:2px;margin-bottom:5px">LAMBDA ORACLE</div>
+      <div style="font-size:12px;color:#64748b;line-height:1.7">Price aggregator<br/>1s update cadence<br/>Signed feed updates<br/>Multi-source</div>
+    </div>
+    <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:5px;padding:10px 12px">
+      <div style="font-size:10px;color:#f59e0b;letter-spacing:2px;margin-bottom:5px">DYNAMODB</div>
+      <div style="font-size:12px;color:#64748b;line-height:1.7">Order book state<br/>Position records<br/>Trade history<br/>Funding rates</div>
+    </div>
+    <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:5px;padding:10px 12px">
+      <div style="font-size:10px;color:#f59e0b;letter-spacing:2px;margin-bottom:5px">S3 + CLOUDFRONT</div>
+      <div style="font-size:12px;color:#64748b;line-height:1.7">ZK Proof Archive<br/>Static assets CDN<br/>Global edge cache<br/>RPC load balance</div>
+    </div>
+    <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:5px;padding:10px 12px">
+      <div style="font-size:10px;color:#f59e0b;letter-spacing:2px;margin-bottom:5px">LIQUIDATION CRON</div>
+      <div style="font-size:12px;color:#64748b;line-height:1.7">Health monitor<br/>EventBridge cron<br/>Proof submission<br/>On-chain trigger</div>
+    </div>
+    <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:5px;padding:10px 12px">
+      <div style="font-size:10px;color:#f59e0b;letter-spacing:2px;margin-bottom:5px">WEBSOCKET HUB</div>
+      <div style="font-size:12px;color:#64748b;line-height:1.7">Live price feeds<br/>Order book Δ<br/>Funding rate push<br/>Trade stream</div>
+    </div>
+  </div>
+  <div style="padding:10px 14px;border-top:1px solid rgba(245,158,11,0.1);display:flex;gap:20px">
+    <span style="font-size:10px;color:#3d2c00">PORT <span style="color:#f59e0b">3011</span></span>
+    <span style="font-size:10px;color:#3d2c00">SQS <span style="color:#f59e0b">async queue</span></span>
+    <span style="font-size:10px;color:#3d2c00">CW <span style="color:#f59e0b">metrics + alerts</span></span>
+    <span style="font-size:10px;color:#3d2c00">R53 <span style="color:#f59e0b">routing</span></span>
+  </div>
+</div>
+
+<!-- SOROBAN CONTRACT BOX -->
+<div style="position:absolute;top:72px;left:1302px;width:420px;height:480px;border:1.5px solid rgba(34,197,94,0.55);border-radius:10px;background:rgba(4,18,10,0.7);display:flex;flex-direction:column">
+  <div style="padding:16px 18px 12px;border-bottom:1px solid rgba(34,197,94,0.15);display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#22c55e;letter-spacing:5px">SOROBAN CONTRACT</div>
+      <div style="font-size:10px;color:#052e16;letter-spacing:2px;margin-top:3px">Rust · Stellar Protocol 26 · BN254</div>
+    </div>
+    <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e"></div>
+  </div>
+  <div style="padding:14px 14px;display:flex;flex-direction:column;gap:7px;flex:1">
+    <div style="background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.18);border-radius:5px;padding:9px 14px;display:flex;justify-content:space-between">
+      <span style="font-size:12px;color:#94a3b8">open_position(market, size, leverage)</span>
+      <span style="font-size:10px;color:#052e16">write</span>
+    </div>
+    <div style="background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.18);border-radius:5px;padding:9px 14px;display:flex;justify-content:space-between">
+      <span style="font-size:12px;color:#94a3b8">close_position(id, proof)</span>
+      <span style="font-size:10px;color:#052e16">write</span>
+    </div>
+    <div style="background:rgba(34,197,94,0.05);border:1px solid rgba(168,85,247,0.2);border-radius:5px;padding:9px 14px;display:flex;justify-content:space-between">
+      <span style="font-size:12px;color:#94a3b8">verify_zk_collateral(proof_bytes)</span>
+      <span style="font-size:10px;color:#a855f7">ZK</span>
+    </div>
+    <div style="background:rgba(34,197,94,0.05);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:9px 14px;display:flex;justify-content:space-between">
+      <span style="font-size:12px;color:#94a3b8">liquidate(id, health_proof)</span>
+      <span style="font-size:10px;color:#ef4444">crit</span>
+    </div>
+    <div style="background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.18);border-radius:5px;padding:9px 14px;display:flex;justify-content:space-between">
+      <span style="font-size:12px;color:#94a3b8">update_funding_rate(market)</span>
+      <span style="font-size:10px;color:#052e16">cron</span>
+    </div>
+    <div style="background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.18);border-radius:5px;padding:9px 14px;display:flex;justify-content:space-between">
+      <span style="font-size:12px;color:#94a3b8">deposit_collateral(amount)</span>
+      <span style="font-size:10px;color:#052e16">write</span>
+    </div>
+  </div>
+  <div style="padding:10px 14px;border-top:1px solid rgba(34,197,94,0.1);display:flex;gap:16px">
+    <span style="font-size:10px;color:#052e16">NET <span style="color:#22c55e">testnet</span></span>
+    <span style="font-size:10px;color:#052e16">WASM <span style="color:#22c55e">zk_perps.wasm</span></span>
+    <span style="font-size:10px;color:#052e16">HOST <span style="color:#22c55e">BN254 funcs</span></span>
+  </div>
+</div>
+
+<!-- ZK CIRCUIT BOX -->
+<div style="position:absolute;top:592px;left:1302px;width:420px;height:270px;border:1.5px solid rgba(168,85,247,0.6);border-radius:10px;background:rgba(12,6,24,0.85);display:flex;flex-direction:column">
+  <div style="padding:16px 18px 12px;border-bottom:1px solid rgba(168,85,247,0.15);display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#a855f7;letter-spacing:5px">ZK CIRCUIT (Noir)</div>
+      <div style="font-size:10px;color:#2e1065;letter-spacing:2px;margin-top:3px">Aztec · UltraHonk · BN254 · WASM</div>
+    </div>
+    <div style="width:8px;height:8px;border-radius:50%;background:#a855f7;box-shadow:0 0 8px #a855f7"></div>
+  </div>
+  <div style="padding:14px 14px;display:flex;flex-direction:column;gap:7px;flex:1">
+    <div style="background:rgba(168,85,247,0.06);border:1px solid rgba(168,85,247,0.2);border-radius:5px;padding:9px 14px;display:flex;justify-content:space-between">
+      <span style="font-size:12px;color:#94a3b8">collateral ≥ margin_requirement</span>
+      <span style="font-size:10px;color:#2e1065">private</span>
+    </div>
+    <div style="background:rgba(168,85,247,0.06);border:1px solid rgba(168,85,247,0.2);border-radius:5px;padding:9px 14px;display:flex;justify-content:space-between">
+      <span style="font-size:12px;color:#94a3b8">position_health() · UltraHonk</span>
+      <span style="font-size:10px;color:#2e1065">prove</span>
+    </div>
+    <div style="background:rgba(168,85,247,0.06);border:1px solid rgba(168,85,247,0.2);border-radius:5px;padding:9px 14px;display:flex;justify-content:space-between">
+      <span style="font-size:12px;color:#94a3b8">price_commitment(mark_price, nonce)</span>
+      <span style="font-size:10px;color:#2e1065">public</span>
+    </div>
+  </div>
+  <div style="padding:10px 14px;border-top:1px solid rgba(168,85,247,0.1);display:flex;gap:16px">
+    <span style="font-size:10px;color:#2e1065">SIZE <span style="color:#a855f7">~4 KB proof</span></span>
+    <span style="font-size:10px;color:#2e1065">GEN <span style="color:#a855f7">~200ms client</span></span>
+    <span style="font-size:10px;color:#2e1065">VER <span style="color:#a855f7">on-chain</span></span>
+  </div>
+</div>
+
+<!-- RIGHT SIDEBAR: infra summary -->
+<div style="position:absolute;top:72px;right:28px;width:160px;bottom:180px;border:1px solid rgba(100,116,139,0.15);border-radius:8px;background:rgba(15,23,35,0.5);padding:14px 12px">
+  <div style="font-size:10px;color:#1e3a5f;letter-spacing:3px;margin-bottom:14px;border-bottom:1px solid rgba(100,116,139,0.1);padding-bottom:10px">AWS INFRA</div>
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div>
+      <div style="font-size:10px;color:#f59e0b;letter-spacing:2px;margin-bottom:4px">COMPUTE</div>
+      <div style="font-size:11px;color:#334155;line-height:1.7">EC2 t3.medium<br/>Lambda 512MB<br/>EventBridge</div>
+    </div>
+    <div style="height:1px;background:rgba(100,116,139,0.1)"></div>
+    <div>
+      <div style="font-size:10px;color:#f59e0b;letter-spacing:2px;margin-bottom:4px">STORAGE</div>
+      <div style="font-size:11px;color:#334155;line-height:1.7">DynamoDB PAY<br/>S3 Standard<br/>CloudWatch</div>
+    </div>
+    <div style="height:1px;background:rgba(100,116,139,0.1)"></div>
+    <div>
+      <div style="font-size:10px;color:#f59e0b;letter-spacing:2px;margin-bottom:4px">NETWORK</div>
+      <div style="font-size:11px;color:#334155;line-height:1.7">CloudFront CDN<br/>Route53 DNS<br/>SQS queue</div>
+    </div>
+    <div style="height:1px;background:rgba(100,116,139,0.1)"></div>
+    <div>
+      <div style="font-size:10px;color:#22c55e;letter-spacing:2px;margin-bottom:4px">REGION</div>
+      <div style="font-size:11px;color:#334155">us-east-1</div>
     </div>
   </div>
 </div>
 
-<!-- BOTTOM STATS ROW -->
-<div style="position:absolute;bottom:28px;left:64px;right:64px;display:flex;gap:20px">
-  <div style="flex:1;border:1px solid rgba(59,130,246,0.15);border-radius:8px;padding:14px 18px;background:rgba(59,130,246,0.02)">
-    <div style="font-size:11px;color:#3b82f6;letter-spacing:4px;margin-bottom:8px">Markets</div>
-    <div style="font-size:12px;color:#334155;line-height:1.8">BTC-PERP &nbsp; ETH-PERP<br/>XLM-PERP &nbsp; SOL-PERP<br/>Up to 20× leverage</div>
-  </div>
-  <div style="flex:1;border:1px solid rgba(168,85,247,0.15);border-radius:8px;padding:14px 18px;background:rgba(168,85,247,0.02)">
-    <div style="font-size:11px;color:#a855f7;letter-spacing:4px;margin-bottom:8px">Collateral</div>
-    <div style="font-size:12px;color:#334155;line-height:1.8">USDC (XLM-denominated)<br/>ZK-private positions<br/>On-chain settlement</div>
-  </div>
-  <div style="flex:1;border:1px solid rgba(245,158,11,0.15);border-radius:8px;padding:14px 18px;background:rgba(245,158,11,0.02)">
-    <div style="font-size:11px;color:#f59e0b;letter-spacing:4px;margin-bottom:8px">AWS Services Used</div>
-    <div style="font-size:12px;color:#334155;line-height:1.8">EC2 · Lambda · DynamoDB<br/>S3 · CloudFront · SQS<br/>CloudWatch · Route53</div>
-  </div>
-  <div style="flex:1;border:1px solid rgba(34,197,94,0.15);border-radius:8px;padding:14px 18px;background:rgba(34,197,94,0.02)">
-    <div style="font-size:11px;color:#22c55e;letter-spacing:4px;margin-bottom:8px">Why Tier 1 ($10k)</div>
-    <div style="font-size:12px;color:#334155;line-height:1.8">Derivatives &amp; Perpetuals category<br/>Matching engine needs EC2 always-on<br/>ZK proof infra = compute-intensive</div>
+<!-- BOTTOM DATA FLOW + STATS -->
+<div style="position:absolute;bottom:0;left:0;right:0;height:172px;border-top:1px solid rgba(59,130,246,0.1);background:rgba(4,9,15,0.8);padding:16px 28px">
+  <div style="display:flex;gap:24px;height:100%">
+
+    <!-- flow description -->
+    <div style="flex:2;border-right:1px solid rgba(59,130,246,0.1);padding-right:24px">
+      <div style="font-size:10px;color:#1e3a5f;letter-spacing:4px;margin-bottom:10px">DATA FLOW</div>
+      <div style="font-size:12px;color:#334155;line-height:1.85">
+        Trader opens position → <span style="color:#3b82f6">bb.js generates UltraHonk proof client-side</span> → REST POST to EC2 matching engine<br/>
+        Engine fills order → <span style="color:#f59e0b">DynamoDB persists state</span> → Stellar SDK submits tx → <span style="color:#22c55e">Soroban verifies ZK proof on-chain</span><br/>
+        Lambda oracle pushes mark price every 1s → EventBridge cron checks health → <span style="color:#a855f7">proof submitted</span> → contract liquidates if underwater
+      </div>
+    </div>
+
+    <!-- stats cards -->
+    <div style="flex:1;display:flex;flex-direction:column;gap:6px">
+      <div style="font-size:10px;color:#1e3a5f;letter-spacing:4px;margin-bottom:4px">MARKETS</div>
+      <div style="display:flex;gap:6px">
+        <div style="flex:1;background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.15);border-radius:4px;padding:6px 8px;font-size:11px;color:#3b82f6;text-align:center">BTC-PERP</div>
+        <div style="flex:1;background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.15);border-radius:4px;padding:6px 8px;font-size:11px;color:#3b82f6;text-align:center">ETH-PERP</div>
+      </div>
+      <div style="display:flex;gap:6px">
+        <div style="flex:1;background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.15);border-radius:4px;padding:6px 8px;font-size:11px;color:#3b82f6;text-align:center">XLM-PERP</div>
+        <div style="flex:1;background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.15);border-radius:4px;padding:6px 8px;font-size:11px;color:#3b82f6;text-align:center">SOL-PERP</div>
+      </div>
+    </div>
+
+    <div style="flex:1;border-left:1px solid rgba(59,130,246,0.08);padding-left:20px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:10px;color:#1e3a5f;letter-spacing:4px;margin-bottom:2px">KEY METRICS</div>
+      <div style="display:flex;justify-content:space-between"><span style="font-size:11px;color:#334155">Max Leverage</span><span style="font-size:11px;color:#f59e0b">20×</span></div>
+      <div style="display:flex;justify-content:space-between"><span style="font-size:11px;color:#334155">Proof Gen Time</span><span style="font-size:11px;color:#a855f7">~200ms</span></div>
+      <div style="display:flex;justify-content:space-between"><span style="font-size:11px;color:#334155">Proof Size</span><span style="font-size:11px;color:#a855f7">~4 KB</span></div>
+      <div style="display:flex;justify-content:space-between"><span style="font-size:11px;color:#334155">Settlement</span><span style="font-size:11px;color:#22c55e">Soroban</span></div>
+      <div style="display:flex;justify-content:space-between"><span style="font-size:11px;color:#334155">Oracle Cadence</span><span style="font-size:11px;color:#f59e0b">1s</span></div>
+    </div>
+
+    <div style="flex:1;border-left:1px solid rgba(59,130,246,0.08);padding-left:20px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:10px;color:#22c55e;letter-spacing:4px;margin-bottom:2px">WHY TIER 1 ($10K)</div>
+      <div style="font-size:11px;color:#334155;line-height:1.8">Derivatives &amp; Perpetuals<br/>EC2 always-on engine<br/>ZK proof = compute-heavy<br/>DynamoDB high throughput<br/>Lambda oracle fleet</div>
+    </div>
+
   </div>
 </div>
 
