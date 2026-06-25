@@ -8,6 +8,50 @@ The exchange supports four perpetual markets (BTC-PERP, ETH-PERP, XLM-PERP, SOL-
 
 ## Architecture
 
+```mermaid
+flowchart LR
+    subgraph FE["FRONTEND"]
+        direction TB
+        F1["Next.js + TailwindCSS"]
+        F2["Trading Dashboard"]
+        F3["Order Book + Depth Chart"]
+        F4["Position Manager"]
+        F5["ZK Proof UI (bb.js)"]
+        F6["PnL + Funding Dashboard"]
+    end
+
+    subgraph BE["BACKEND — AWS"]
+        direction TB
+        B1["EC2 — Matching Engine"]
+        B2["Lambda — Price Oracle"]
+        B3["DynamoDB — Order Book"]
+        B4["S3 — Proof Archive"]
+        B5["CloudFront — Global RPC"]
+        B6["Liquidation Monitor (cron)"]
+        B7["WebSocket — Live Feeds"]
+    end
+
+    subgraph SC["SOROBAN CONTRACT"]
+        direction TB
+        C1["open_position()"]
+        C2["close_position()"]
+        C3["liquidate(proof)"]
+        C4["verify_zk_collateral()"]
+        C5["update_funding_rate()"]
+    end
+
+    subgraph ZK["ZK CIRCUIT — Noir"]
+        direction TB
+        Z1["collateral ≥ margin · private"]
+        Z2["position_health() · UltraHonk"]
+    end
+
+    FE -->|"REST / WS"| BE
+    BE -->|"Stellar SDK"| SC
+    FE -->|"proof submit"| ZK
+    ZK -->|"UltraHonk proof"| SC
+```
+
 | Layer | Technology | Purpose |
 |---|---|---|
 | Frontend | Next.js 14, TailwindCSS, Recharts | Trading UI, position dashboard, PnL charts |
