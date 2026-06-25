@@ -1,0 +1,18 @@
+{
+  "name": "zk-perps-backend",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "ws": "^8.18.0",
+    "stellar-sdk": "^12.3.0",
+    "dotenv": "^16.4.5",
+    "uuid": "^10.0.0"
+  }
+}

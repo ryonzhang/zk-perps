@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { --bg: #060e1c; }
+body { background: #060e1c; color: #e2e8f0; font-family: 'IBM Plex Mono', monospace; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #0c1e35; } ::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 2px; }

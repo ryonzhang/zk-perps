@@ -1,0 +1,7 @@
+[package]
+name = "collateral_proof"
+type = "bin"
+authors = ["ZK Perps"]
+compiler_version = ">=0.31.0"
+
+[dependencies]
