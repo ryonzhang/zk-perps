@@ -8,6 +8,8 @@ The exchange supports four perpetual markets (BTC-PERP, ETH-PERP, XLM-PERP, SOL-
 
 ## Architecture
 
+![ZK Perps Full Stack Architecture](docs/architecture.png)
+
 ```mermaid
 flowchart LR
     subgraph FE["FRONTEND"]
